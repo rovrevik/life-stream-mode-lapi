@@ -1,1 +1,1 @@
-# life-stream-mode-lapi
+# life-stream-model-api
