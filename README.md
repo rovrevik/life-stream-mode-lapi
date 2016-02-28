@@ -114,6 +114,14 @@ Group things that need to be done or acted upon during a particular trip. Creati
 - [Express](http://expressjs.com/)
 - [MongoDB](https://www.mongodb.org/)
 - [Mongoose ODM](http://mongoosejs.com/)
+- [q](http://documentup.com/kriskowal/q/)
+- [lodash](https://lodash.com/)
+- [JSON Web Tokens](https://jwt.io/)
+
+## Useful Testing libraries
+- [Should.js](https://shouldjs.github.io/)
+- [supertest-as-promised](https://github.com/WhoopInc/supertest-as-promised)
+- 
 
 ## Potentially useful libraries and specifications.
 - [Open API Initiative (OAI)](https://openapis.org/)
