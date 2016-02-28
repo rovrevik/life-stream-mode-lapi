@@ -32,7 +32,7 @@ describe('Authentication API', function() {
         var requireAuthenticated = auth(app).authenticated;
         users(app, requireAuthenticated);
 
-        return mongoose.connect('mongodb://localhost/contactsDemoTest').then();
+        return mongoose.connect('mongodb://localhost/lifeStreamTest').then();
     });
 
     afterEach(function() {
@@ -107,7 +107,7 @@ describe('Authentication API', function() {
         before(function() {
             var userDoc1 = {username: 'authUser1', password: 'xxx'};
             var userDoc2 = {username: 'authUser2', password: 'yyy'};
-            return mongoose.connect('mongodb://localhost/contactsDemoTest').then(function() {
+            return mongoose.connect('mongodb://localhost/lifeStreamTest').then(function() {
                 return User.create(userDoc1);
             }).then(function() {
                 return User.create(userDoc2);
@@ -153,7 +153,7 @@ describe('Authentication API', function() {
     });
 
     function removeAllUsers() {
-        return mongoose.connect('mongodb://localhost/contactsDemoTest').then(function() {
+        return mongoose.connect('mongodb://localhost/lifeStreamTest').then(function() {
             // TODO just drop the collection
             return User.remove().exec();
         }).then(function () {

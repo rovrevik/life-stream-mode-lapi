@@ -21,7 +21,7 @@ var requireAuthenticated = auth(app).authenticated;
 users(app, requireAuthenticated);
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/contactsDemoTest');
+mongoose.connect('mongodb://localhost/lifeStream');
 
 app.use(express.static('src/client'));
 

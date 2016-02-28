@@ -14,7 +14,7 @@ var User = mongoose.model('User');
 
 describe('User Model', function() {
     beforeEach(function() {
-        return mongoose.connect('mongodb://localhost/contactsDemoTest');
+        return mongoose.connect('mongodb://localhost/lifeStreamTest');
     });
     afterEach(function() {
         return mongoose.disconnect();
@@ -92,7 +92,7 @@ describe('User Model', function() {
 
     function removeAllUsers() {
         return Promise.all([
-            mongoose.connect('mongodb://localhost/contactsDemoTest'),
+            mongoose.connect('mongodb://localhost/lifeStreamTest'),
             // TODO just drop the collection
             User.remove().exec().then(function() {
                 return mongoose.disconnect();

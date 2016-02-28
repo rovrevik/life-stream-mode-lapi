@@ -4,8 +4,8 @@
  * Created by rovrevik on 2/13/16.
  */
 
-var request = require('supertest-as-promised');
 var should = require('should');
+var request = require('supertest-as-promised');
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -25,7 +25,7 @@ describe('Users API', function() {
         app = express();
         app.use(bodyParser.json());
         users(app, function(req, res, next) { next(); });
-        return mongoose.connect('mongodb://localhost/contactsDemoTest');
+        return mongoose.connect('mongodb://localhost/lifeStreamTest');
     });
 
     afterEach(function() {
@@ -189,7 +189,7 @@ describe('Users API', function() {
 
     function removeAllUsers() {
         return Promise.all([
-            mongoose.connect('mongodb://localhost/contactsDemoTest'),
+            mongoose.connect('mongodb://localhost/lifeStreamTest'),
             // TODO just drop the collection
             User.remove().exec().then(function() {
                 return mongoose.disconnect();
